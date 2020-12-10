@@ -1,4 +1,4 @@
-<h1>Hello</h1>
+<h1>Home page</h1>
 
 <% if user_signed_in? %>
   <%= link_to "log out", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
@@ -7,15 +7,15 @@
 <% end %>
 
 <% if user_signed_in? %>
-  <h6>Name</h6>
-  <p><%= current_user.first_name %></p>
-  <p><%= current_user.last_name %></p>
-  <h6>manager</h6>
-  <p><%= current_user.manager %></p>
-  <h6>fixer</h6>
-  <p><%= current_user.fixer %></p>
-  <h6>customer</h6>
-  <p><%= current_user.customer %></p>
+    <h6>Name</h6>
+    <p><%= current_user.first_name %></p>
+    <p><%= current_user.last_name %></p>
+    <h6>manager</h6>
+    <p><%= current_user.manager %></p>
+    <h6>fixer</h6>
+    <p><%= current_user.fixer %></p>
+    <h6>customer</h6>
+    <p><%= current_user.customer %></p>
 <% end %>
 
-<%#= link_to "New user", users_add_user_path, class: "btn btn-primary" %>
+<%= link_to "Users", users_path, class: "btn btn-primary" %>

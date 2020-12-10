@@ -1,0 +1,18 @@
+<h1>Users Index</h1>
+
+<div class="cards d-flex">
+  <% @users.each do |user| %>
+    <div class="card">
+      <h6>Name</h6>
+      <p><%= current_user.first_name %></p>
+      <p><%= current_user.last_name %></p>
+      <h6>manager</h6>
+      <p><%= current_user.manager %></p>
+      <h6>fixer</h6>
+      <p><%= current_user.fixer %></p>
+      <h6>customer</h6>
+      <p><%= current_user.customer %></p>
+    </div>
+  <% end %>
+</div>
+<%= link_to "home", root_path, class: "btn btn-danger" %>
