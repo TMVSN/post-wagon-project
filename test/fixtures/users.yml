@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  address: MyString
+  email: MyString
+  manager: false
+  fixer: false
+  user_lat: 1.5
+  user_lon: 1.5
+
+two:
+  first_name: MyString
+  last_name: MyString
+  address: MyString
+  email: MyString
+  manager: false
+  fixer: false
+  user_lat: 1.5
+  user_lon: 1.5
