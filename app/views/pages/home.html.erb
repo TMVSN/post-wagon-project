@@ -1,7 +1,45 @@
+<<<<<<< HEAD
 <h1>let's code !</h1>
 
+
+
 <% if user_signed_in? %>
-<%= link_to "log out", destroy_user_session_path %>
+
+  <p>Current role :</p>
+    <% if current_user.manager == true && current_user.fixer == false %>
+    <p>Manager</p>
+  <% elsif current_user.manager == false && current_user.fixer == true %>
+    <p>Fixer</p>
+  <% else %>
+    <p>Customer</p>
+  <% end %>
+
+  <p><%= link_to "log out", destroy_user_session_path, class: "btn btn-primary" %></p>
+  <p><%= link_to "Users index", users_path, class: "btn btn-secondary" %></p>
+  <p><%= link_to "new User", new_user_path, class: "btn btn-success" %></p>
 <% else %>
-<%= link_to "Sign in", new_user_session_path %>
+  <%= link_to "Sign in", new_user_session_path, class: "btn btn-danger" %>
 <% end %>
+=======
+<h1>Home page</h1>
+
+<% if user_signed_in? %>
+  <%= link_to "log out", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+<% else %>
+  <%= link_to "Log in", new_user_session_path, class: "btn btn-primary" %>
+<% end %>
+
+<% if user_signed_in? %>
+    <h6>Name</h6>
+    <p><%= current_user.first_name %></p>
+    <p><%= current_user.last_name %></p>
+    <h6>manager</h6>
+    <p><%= current_user.manager %></p>
+    <h6>fixer</h6>
+    <p><%= current_user.fixer %></p>
+    <h6>customer</h6>
+    <p><%= current_user.customer %></p>
+<% end %>
+
+<%= link_to "Users", users_path, class: "btn btn-primary" %>
+>>>>>>> e68d0dc997763ea99598f916b444899cac537e6a

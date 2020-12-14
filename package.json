@@ -7,8 +7,11 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.3.0",
     "bootstrap": "^4.5.3",
+<<<<<<< HEAD
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
+=======
+>>>>>>> e68d0dc997763ea99598f916b444899cac537e6a
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",

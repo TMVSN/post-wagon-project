@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_12_14_113157) do
 
   create_table "users", force: :cascade do |t|
@@ -20,11 +21,29 @@ ActiveRecord::Schema.define(version: 2020_12_14_113157) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+=======
+ActiveRecord::Schema.define(version: 2020_12_10_170431) do
+
+  create_table "users", force: :cascade do |t|
+>>>>>>> e68d0dc997763ea99598f916b444899cac537e6a
     t.string "first_name"
     t.string "last_name"
     t.string "address"
     t.boolean "manager", default: false
     t.boolean "fixer", default: false
+<<<<<<< HEAD
+=======
+    t.boolean "customer", default: true
+    t.float "user_lat"
+    t.float "user_lon"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+>>>>>>> e68d0dc997763ea99598f916b444899cac537e6a
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
